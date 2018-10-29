@@ -1,0 +1,7 @@
+/dist/
+/node_modules/
+/src/
+package-lock.json
+stats.json
+vendor-manifest.json
+vendor.dll.js
