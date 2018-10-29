@@ -5,3 +5,4 @@ package-lock.json
 stats.json
 vendor-manifest.json
 vendor.dll.js
+animation.js
