@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const dictionary = require('../config/dictionary')
 const argv = require('yargs').argv
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
@@ -41,7 +42,13 @@ const webpackBaseConfig = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin([{
+            from: path.resolve(__dirname, '../static'),
+            to: path.resolve(__dirname, '../dist')
+        }])
+    ]
 }
 
 if (argv.mode === 'production') {
@@ -50,7 +57,6 @@ if (argv.mode === 'production') {
             loader: MiniCssExtractPlugin.loader
         })
     }
-    webpackBaseConfig.plugins = []
     webpackBaseConfig.plugins.push(
         new MiniCssExtractPlugin({
             filename: "[contentHash].css"

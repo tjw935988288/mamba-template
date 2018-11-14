@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         // manifest.json输出路径
-        path: path.join(__dirname, '..'),
+        path: path.join(__dirname, '../static'),
         // 输出文件名
         filename: '[name].dll.js',
         // 默认的library: var, 通过script标签引入输出文件时，返回值会赋值给library的值

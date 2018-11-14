@@ -13,7 +13,7 @@ const devWebpackConfig = merge(webpackBaseConfig, {
             manifest: require('../vendor-manifest.json')
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../index.html')
+            template: path.resolve(__dirname, '../test/index.html')
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
@@ -26,6 +26,7 @@ const devWebpackConfig = merge(webpackBaseConfig, {
         ]
     },
     devServer:{
+        contentBase: path.resolve(__dirname, '../dist'),
         host: 'localhost',
         port: 8080,
         open: true,
