@@ -39,6 +39,7 @@
     "style-loader": "^0.23.1",
     "terser": "^3.10.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
+    "vue-loader": "^15.4.2",
     "webpack": "^4.20.2",
     "webpack-build-dll-plugin": "^1.3.2",
     "webpack-bundle-analyzer": "^3.0.3",
