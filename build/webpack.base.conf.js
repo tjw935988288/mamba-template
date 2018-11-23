@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const dictionary = require('../config/dictionary')
 const argv = require('yargs').argv
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const vueLoaderConfig = 
+const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)

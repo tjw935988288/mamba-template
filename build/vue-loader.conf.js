@@ -1,3 +1,5 @@
+const argv = require('yargs').argv
+
 const isProduction = argv.mode === 'production'
 const sourceMapEnabled = isProduction
   ? false
