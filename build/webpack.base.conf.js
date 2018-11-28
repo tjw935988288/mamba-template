@@ -21,11 +21,6 @@ const webpackBaseConfig = {
     module: {
         rules: [
             {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: vueLoaderConfig
-            },
-            {
                 test: /\.js$/,
                 use: [{
                     loader: 'babel-loader',
@@ -71,7 +66,12 @@ const webpackBaseConfig = {
                   limit: 10000,
                   name: 'fonts/[name].[hash:7].[ext]'
                 }
-            }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: vueLoaderConfig
+            },
         ]
     },
     plugins: [
