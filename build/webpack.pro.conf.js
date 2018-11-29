@@ -8,11 +8,9 @@ const glob = require('glob-all')
 const OptimizeCss = require('optimize-css-assets-webpack-plugin')
 const webpackBaseConfig = require('./webpack.base.conf.js')
 const merge = require('webpack-merge')
-const logPlugin = require('../plugins/logPlugin')
 
 const proWebpackConfig = merge(webpackBaseConfig, {
     plugins: [
-        new logPlugin(),
         new CleanWebpackPlugin(['../dist'], {
             allowExternal: true
         }),

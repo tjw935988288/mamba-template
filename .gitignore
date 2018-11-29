@@ -2,9 +2,9 @@
 /node_modules/
 /src/
 /static/
+/plugins/
 package-lock.json
 stats.json
 vendor-manifest.json
 vendor.dll.js
 animation.js
-
