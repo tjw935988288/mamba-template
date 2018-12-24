@@ -8,6 +8,7 @@ const glob = require('glob-all')
 const OptimizeCss = require('optimize-css-assets-webpack-plugin')
 const webpackBaseConfig = require('./webpack.base.conf.js')
 const merge = require('webpack-merge')
+const webpack = require('webpack')
 
 const proWebpackConfig = merge(webpackBaseConfig, {
     plugins: [
@@ -28,6 +29,7 @@ const proWebpackConfig = merge(webpackBaseConfig, {
             cssProcessor: require('cssnano'),
             cssProcessorOptions: { discardComments: { removeAll: true } }
         }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     optimization: {
         runtimeChunk: {

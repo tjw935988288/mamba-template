@@ -40,7 +40,8 @@ const webpackBaseConfig = {
             {
                 test: /\.css$/,
                 use: [
-                    "css-loader"
+                    "css-loader",
+                    "postcss-loader"
                 ]
             },
             {
@@ -93,6 +94,8 @@ if (argv.mode === 'production') {
             filename: "[contentHash].css"
         })
     )
+} else {
+    webpackBaseConfig.module.rules[dictionary.loaders.css].use.unshift('style-loader')
 }
 
 module.exports = webpackBaseConfig
